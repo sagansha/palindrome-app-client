@@ -1,0 +1,35 @@
+<div class="toolbar" role="banner">
+  <img width="40" alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+  <span>Palindromer</span>
+</div>
+
+<div class="split left">
+  <div class="centered">
+    <form>
+      <label class="labeltext" for="fname">Enter Palindrome:</label><br><br><br>
+      <input class="input" type="text" id="palindrome_data" name="palindrome_data" [(ngModel)]="currData"
+        placeholder="Enter here.." autocomplete="on"><br><br>
+      <button class="button button1" type="submit" value="Submit" (click)="addData()">ADD</button>
+    </form>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Palindrome List
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of values">
+          <td>{{item.value}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
